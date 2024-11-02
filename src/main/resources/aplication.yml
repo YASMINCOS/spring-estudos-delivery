@@ -1,0 +1,33 @@
+server:
+  port: 9000
+spring:
+  data:
+    rest:
+      base-path: /api
+  datasource:
+    url: jdbc:h2:mem:greendog
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  hateoas:
+    use-hal-as-default-json-media-type: false
+  jpa:
+    show-sql: true
+  profiles:
+    active: dev
+  thymeleaf:
+    cache: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+# mensagem de oferta
+mensagem: Compre 1 hot dog e ganhe 1 suco de laranja ! Aproveite!
+debug: 1
